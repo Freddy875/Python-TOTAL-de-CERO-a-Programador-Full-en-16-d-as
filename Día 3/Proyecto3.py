@@ -1,10 +1,9 @@
 # ------------------------------------------------------------
 # Proyecto del Día 3
 # Analizador de texto
-# El programa recibe un texto y tres letras para realizar
+# El programa solicita un texto y tres letras para realizar
 # diferentes análisis sobre la información proporcionada.
 # ------------------------------------------------------------
-
 
 # ------------------------------------------------------------
 # Solicitar el texto
@@ -15,47 +14,53 @@ texto = input("Ingresa el texto que deseas analizar: ")
 
 
 # ------------------------------------------------------------
+# Crear una lista para almacenar las letras
+# La lista permitirá guardar las tres letras que el usuario
+# desea buscar dentro del texto.
+# ------------------------------------------------------------
+
+letras = []
+
+
+# ------------------------------------------------------------
 # Solicitar las tres letras
-# Se pide al usuario que ingrese tres letras para buscarlas
-# dentro del texto.
+# Cada letra ingresada se convierte a minúscula y se agrega
+# a la lista utilizando el método append().
 # ------------------------------------------------------------
 
-letra1 = input("Ingresa la primera letra: ")
-letra2 = input("Ingresa la segunda letra: ")
-letra3 = input("Ingresa la tercera letra: ")
+letras.append(input("Ingresa la primera letra: ").lower())
+
+letras.append(input("Ingresa la segunda letra: ").lower())
+
+letras.append(input("Ingresa la tercera letra: ").lower())
 
 
 # ------------------------------------------------------------
-# Preparar el texto y las letras
-# Se convierten el texto y las letras a minúsculas para que
-# la búsqueda no distinga entre mayúsculas y minúsculas.
+# Convertir el texto a minúsculas
+# Se convierte el texto para que la búsqueda no distinga
+# entre mayúsculas y minúsculas.
 # ------------------------------------------------------------
 
 texto = texto.lower()
 
-letra1 = letra1.lower()
-letra2 = letra2.lower()
-letra3 = letra3.lower()
-
 
 # ------------------------------------------------------------
 # Contar las letras
-# El método count() cuenta cuántas veces aparece cada letra
-# dentro del texto.
+# El método count() cuenta directamente cuántas veces aparece
+# cada letra de la lista dentro del texto.
 # ------------------------------------------------------------
 
-print(f"La letra '{letra1}' aparece {texto.count(letra1)} veces.")
+print(f"La letra '{letras[0]}' aparece {texto.count(letras[0])} veces.")
 
-print(f"La letra '{letra2}' aparece {texto.count(letra2)} veces.")
+print(f"La letra '{letras[1]}' aparece {texto.count(letras[1])} veces.")
 
-print(f"La letra '{letra3}' aparece {texto.count(letra3)} veces.")
+print(f"La letra '{letras[2]}' aparece {texto.count(letras[2])} veces.")
 
 
 # ------------------------------------------------------------
 # Contar las palabras
 # El método split() convierte el texto en una lista de palabras.
-# La función len() permite conocer cuántos elementos contiene
-# esa lista.
+# La función len() permite conocer cuántas palabras contiene.
 # ------------------------------------------------------------
 
 palabras = texto.split()
@@ -76,8 +81,8 @@ print(f"La última letra del texto es: {texto[-1]}")
 
 # ------------------------------------------------------------
 # Invertir el orden de las palabras
-# Se utiliza reverse() para invertir la lista de palabras
-# y join() para volver a unirlas formando un string.
+# reverse() invierte el orden de la lista de palabras y
+# join() vuelve a unirlas formando un string.
 # ------------------------------------------------------------
 
 palabras.reverse()
