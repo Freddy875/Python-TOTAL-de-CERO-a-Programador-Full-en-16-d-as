@@ -66,6 +66,11 @@ mi_bool = num1 > num2 or num1 < num3
 print("\nPor lo tanto:")
 
 if mi_bool:
-    print(f"El número 1 ({num1}) no es mayor que el número 2 ({num2}), pero sí es menor que el número 3 ({num3}).")
+    print(f"\nTienes ${num1}, el producto cuesta ${num2} y tu límite de compra es ${num3}.")
+
+    if num1 > num2:
+        print("Tienes más dinero que el precio del producto, por lo tanto puedes comprarlo.")
+    elif num1 < num3:
+        print("El precio está dentro de tu límite de compra, por lo tanto puedes comprarlo.")
 else:
-    print(f"El número 1 ({num1}) no es mayor que el número 2 ({num2}) ni menor que el número 3 ({num3}).")
+    print("No se cumple ninguna de las condiciones, por lo tanto no puedes comprarlo.")
