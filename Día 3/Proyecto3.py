@@ -104,3 +104,26 @@ if "python" in texto:
     print("La palabra Python sí se encuentra en el texto.")
 else:
     print("La palabra Python no se encuentra en el texto.")
+
+# ------------------------------------------------------------
+# Guardar los resultados
+# Se crea un archivo de texto para guardar los datos ingresados
+# y los resultados obtenidos por el programa.
+# El modo "a" permite agregar nuevos resultados sin borrar
+# los anteriores.
+# ------------------------------------------------------------
+
+with open("resultados.txt", "a", encoding="utf-8") as archivo:
+    archivo.write(f"Texto ingresado: {texto}\n")
+    archivo.write(f"Primera letra: {letras[0]}\n")
+    archivo.write(f"Segunda letra: {letras[1]}\n")
+    archivo.write(f"Tercera letra: {letras[2]}\n")
+    archivo.write(f"Cantidad de '{letras[0]}': {texto.count(letras[0])}\n")
+    archivo.write(f"Cantidad de '{letras[1]}': {texto.count(letras[1])}\n")
+    archivo.write(f"Cantidad de '{letras[2]}': {texto.count(letras[2])}\n")
+    archivo.write(f"Cantidad de palabras: {len(palabras)}\n")
+    archivo.write(f"Primera letra del texto: {texto[0]}\n")
+    archivo.write(f"Última letra del texto: {texto[-1]}\n")
+    archivo.write(f"Texto invertido: {texto_invertido}\n")
+    archivo.write(f"Contiene Python: {'Sí' if 'python' in texto else 'No'}\n")
+    archivo.write("-" * 50 + "\n")
