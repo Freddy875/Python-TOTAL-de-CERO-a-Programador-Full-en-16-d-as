@@ -146,6 +146,20 @@ print(type(mi_numero))
 print(mi_numero)
 # Imprime: True
 
+# ------------------------------------------------------------
+# Comparar dos números float
+# Se compara si 10.0 es igual a 25.0.
+# Como los valores son diferentes, el resultado es False.
+# ------------------------------------------------------------
+
+mi_numero = 10.0 == 25.0
+
+print(type(mi_numero))
+# Imprime: <class 'bool'>
+
+print(mi_numero)
+# Imprime: False
+
 
 # ------------------------------------------------------------
 # Comparación diferente
