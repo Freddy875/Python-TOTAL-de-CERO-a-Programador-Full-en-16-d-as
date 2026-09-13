@@ -4,20 +4,33 @@ num1 = 36
 num2 = 72 / 2
 num3 = 48
 
-print(f"num1 es: {num1}")
-print(f"num2 es: 72 / 2 = {num2}")
-print(f"num3 es: {num3}")
+
+# Mostrar los valores de las variables
+
+print(f"El número 1 es: {num1}")
+print(f"El número 2 es el resultado de 72 / 2: {num2}")
+print(f"El número 3 es: {num3}")
 
 
-# Verificar si num1 es mayor que num2 y menor que num3
+# Comparar el número 1 con el número 2
 
-print(f"\n¿num1 ({num1}) es mayor que num2 ({num2})?")
-print(num1 > num2)
+print(f"\n¿El número 1 ({num1}) es mayor que el número 2 ({num2})?")
+print("Sí" if num1 > num2 else "No")
 
-print(f"\n¿num1 ({num1}) es menor que num3 ({num3})?")
-print(num1 < num3)
+
+# Comparar el número 1 con el número 3
+
+print(f"\n¿El número 1 ({num1}) es menor que el número 3 ({num3})?")
+print("Sí" if num1 < num3 else "No")
+
+
+# Verificar las dos condiciones
 
 mi_bool = num1 > num2 and num1 < num3
 
-print(f"\nPor lo tanto, ¿num1 es mayor que num2 y menor que num3?")
-print(mi_bool)
+print("\nPor lo tanto:")
+
+if mi_bool:
+    print("El número 1 es mayor que el número 2 y menor que el número 3.")
+else:
+    print("El número 1 no es mayor que el número 2 y menor que el número 3.")
