@@ -49,9 +49,12 @@ mi_bool = num1 != num2
 
 
 # ------------------------------------------------------------
-# Imprimir el resultado de la comparación
-# Se muestra el valor booleano obtenido de la comparación.
+# Mostrar el resultado de la comparación
+# Se utiliza if para mostrar un mensaje que explique el
+# resultado de la comparación de forma clara.
 # ------------------------------------------------------------
 
-print(f"Por lo tanto, los números son diferentes: {mi_bool}")
-# Imprime: Por lo tanto, los números son diferentes: False
+if mi_bool:
+    print("Por lo tanto, los números son diferentes.")
+else:
+    print("Por lo tanto, los números son iguales.")
