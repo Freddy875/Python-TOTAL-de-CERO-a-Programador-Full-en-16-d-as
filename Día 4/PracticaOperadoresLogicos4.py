@@ -35,15 +35,20 @@ mi_bool = num1 > num2 and num1 < num3
 
 # ------------------------------------------------------------
 # Mostrar la conclusión
-# Si ambas condiciones se cumplen, el jugador gana.
-# Si alguna de las dos condiciones no se cumple, no gana.
+# Para ganar, el número 1 debe ser mayor que el número 2
+# y menor que el número 3.
+# Como ambos tienen la misma puntuación, el número 1 no es
+# mayor que el número 2, por lo que no se cumplen ambas
+# condiciones.
 # ------------------------------------------------------------
 
+print("\nPor lo tanto:")
+
 if mi_bool:
-    print(f"\nTienes {num1} puntos y el otro jugador tiene {num2}.")
-    print(f"Además, tus puntos ({num1}) están por debajo del límite de {num3} puntos.")
-    print("Como se cumplen ambas condiciones, ¡ganas la competencia!")
+    print(f"Tienes {num1} puntos, más que el otro jugador ({num2}),")
+    print(f"y estás por debajo del límite de {num3} puntos.")
+    print("¡Ganaste!")
 else:
-    print(f"\nTienes {num1} puntos y el otro jugador tiene {num2}.")
-    print(f"El límite es de {num3} puntos.")
-    print("No se cumplen ambas condiciones, por lo tanto no ganas la competencia.")
+    print(f"Tienes {num1} puntos y el otro jugador tiene {num2}.")
+    print(f"Ambos están por debajo del límite de {num3} puntos.")
+    print("Ninguno gana porque tienen la misma puntuación.")
