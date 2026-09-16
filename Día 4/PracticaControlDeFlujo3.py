@@ -1,47 +1,47 @@
 # ------------------------------------------------------------
-# Práctica Control de Flujo 5
+# Práctica Control de Flujo 3
 #
-# Solicita al usuario que indique si sabe programar en Python
-# y si tiene conocimientos de inglés.
+# Para acceder a un determinado puesto de trabajo, el candidato
+# debe saber programar en Python y tener conocimientos de inglés.
 #
-# Después se evalúan las respuestas para determinar si cumple
-# con los requisitos para postularse.
+# Se debe evaluar al candidato y mostrar el mensaje correspondiente
+# según las condiciones que cumpla.
+#
+# En este ejercicio se evalúa a un candidato que sabe inglés,
+# pero no sabe programar en Python.
 # ------------------------------------------------------------
 
- 
+
 # ------------------------------------------------------------
-# Solicitar las respuestas al usuario
+# Definir las variables
 #
-# input() permite al usuario indicar si sabe programar en Python
-# y si tiene conocimientos de inglés.
-#
-# lower() convierte la respuesta a minúsculas para facilitar
-# la comparación con "sí" o "no".
+# Se utilizan valores booleanos para indicar si el candidato
+# habla inglés y si sabe programar en Python.
 # ------------------------------------------------------------
 
-sabe_python = input("¿Sabes programar en Python? (Sí/No): ").lower()
-habla_ingles = input("¿Sabes inglés? (Sí/No): ").lower()
+habla_ingles = True
+sabe_python = False
 
 
 # ------------------------------------------------------------
 # Evaluar las condiciones
 #
-# Se utiliza and para comprobar que el usuario cumpla con
-# ambos requisitos: saber programar en Python y saber inglés.
+# Se utiliza and para comprobar si ambas condiciones son
+# verdaderas: hablar inglés y saber programar en Python.
 #
-# elif permite comprobar las diferentes combinaciones posibles.
+# not se utiliza para comprobar cuando una condición es falsa.
 #
-# not no es necesario en esta versión, ya que las respuestas
-# se comparan directamente con "sí" o "no".
+# elif permite evaluar las diferentes combinaciones posibles
+# de las condiciones.
 # ------------------------------------------------------------
 
-if habla_ingles == "si" and sabe_python == "si":
+if habla_ingles and sabe_python:
     print("Cumples con los requisitos para postularte")
 
-elif habla_ingles == "no" and sabe_python == "no":
+elif not habla_ingles and not sabe_python:
     print("Para postularte, necesitas saber programar en Python y tener conocimientos de inglés")
 
-elif habla_ingles == "no":
+elif not habla_ingles:
     print("Para postularte, necesitas tener conocimientos de inglés")
 
 else:
