@@ -1,0 +1,26 @@
+Texto ingresado: los 7 hábitos de la gente altamente efectiva
+Primera letra: a
+Segunda letra: b
+Tercera letra: c
+Cantidad de 'a': 4
+Cantidad de 'b': 1
+Cantidad de 'c': 1
+Cantidad de palabras: 8
+Primera letra del texto: l
+Última letra del texto: a
+Texto invertido: efectiva altamente gente la de hábitos 7 los
+Contiene Python: No
+--------------------------------------------------
+Texto ingresado: automatiza las tareas aburridas con python
+Primera letra: x
+Segunda letra: y
+Tercera letra: z
+Cantidad de 'x': 0
+Cantidad de 'y': 1
+Cantidad de 'z': 1
+Cantidad de palabras: 6
+Primera letra del texto: a
+Última letra del texto: n
+Texto invertido: python con aburridas tareas las automatiza
+Contiene Python: Sí
+--------------------------------------------------
