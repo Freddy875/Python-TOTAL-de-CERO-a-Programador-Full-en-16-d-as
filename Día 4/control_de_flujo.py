@@ -75,3 +75,24 @@ elif mascota == "conejo":
     print("Tienes un conejo")
 else:
     print("No se que tipo de mascota tienes")
+
+# ------------------------------------------------------------
+# Ejemplo de if anidado: entrada al cine
+#
+# Primero se comprueba si la persona tiene boleto.
+# Si tiene boleto, se realiza una segunda comprobación
+# para saber si es mayor de edad.
+# ------------------------------------------------------------
+
+tiene_boleto = True
+edad = 20
+
+if tiene_boleto:
+    print("Puedes entrar al cine")
+
+    if edad >= 18:
+        print("Puedes ver la película para adultos")
+    else:
+        print("Debes elegir una película para menores")
+else:
+    print("No puedes entrar porque no tienes boleto")
