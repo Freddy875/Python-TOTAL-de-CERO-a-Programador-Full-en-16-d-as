@@ -1,52 +1,88 @@
-### Bucle básico 
+# ------------------------------------------------------------
+# Bucle while básico
+#
+# Se utiliza while para repetir una acción mientras la
+# condición sea verdadera.
+# ------------------------------------------------------------
 
 monedas = 5
 
 while monedas > 0:
-    print(f"Tengo {monedas}  monedas")
-    monedas = monedas -1
-
-### Otra forma economica de escribirlo
-
-print("\n")
-
-monedas = 5
-
-while monedas > 0:
-    print(f"Tengo {monedas}  monedas")
+    print(f"Tengo {monedas} monedas")
     monedas -= 1
+
 else:
     print("Ya no tienes más monedas")
+
+
+# ------------------------------------------------------------
+# while para repetir una pregunta
+#
+# El bucle continúa mientras el usuario responda "s".
+# ------------------------------------------------------------
 
 respuesta = "s"
 
 while respuesta == "s":
     respuesta = input("¿Quieres seguir? (s/n): ")
+
 else:
-    print("Adios")
+    print("Adiós")
 
-### Palabras clave pass
 
-while respuesta == "s":
-    pass
+# ------------------------------------------------------------
+# pass
+#
+# pass permite dejar un bloque sin ninguna acción.
+# En este ejemplo se utiliza cuando una tarea no tiene
+# una acción definida.
+# ------------------------------------------------------------
 
-print("Adios")
+print("\n--- PASS ---")
 
-### Break para interumpir el flujo
+tareas = ["estudiar", "comprar comida", "hacer ejercicio"]
 
-nombre = input("Ingree su nombre: ")
+for tarea in tareas:
+    if tarea == "comprar comida":
+        pass
+    else:
+        print(f"Realizar tarea: {tarea}")
 
-for letra in nombre:
-    if letra == "n":
+
+# ------------------------------------------------------------
+# break
+#
+# break interrumpe completamente el bucle.
+# En este ejemplo, el recorrido termina cuando se encuentra
+# a María.
+# ------------------------------------------------------------
+
+print("\n--- BREAK ---")
+
+personas = ["Ana", "Carlos", "Luis", "María", "Pedro"]
+
+for persona in personas:
+    print(f"Buscando a {persona}...")
+
+    if persona == "María":
+        print("¡Encontré a María!")
         break
-    print(letra)
 
-### Continue
 
-nombre = input("Ingree su nombre: ")
+# ------------------------------------------------------------
+# continue
+#
+# continue salta la iteración actual y continúa con la
+# siguiente.
+# En este ejemplo, se salta a Luis y continúa con María.
+# ------------------------------------------------------------
 
-for letra in nombre:
-    if letra == "r":
+print("\n--- CONTINUE ---")
+
+personas = ["Ana", "Carlos", "Luis", "María"]
+
+for persona in personas:
+    if persona == "Luis":
         continue
-    print(letra)
 
+    print(f"Hola {persona}")
