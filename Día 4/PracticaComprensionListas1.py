@@ -19,7 +19,7 @@ valores = [1, 2, 3, 4, 5, 6, 9.5]
 # El resultado de cada operación se almacena en valores_cuadrado.
 # ------------------------------------------------------------
 
-valores_cuadrado = [x**2 for x in valores]
+valores_cuadrado = [numero**2 for numero in valores]
 
 # ------------------------------------------------------------
 # Imprime la nueva lista con todos los valores elevados
