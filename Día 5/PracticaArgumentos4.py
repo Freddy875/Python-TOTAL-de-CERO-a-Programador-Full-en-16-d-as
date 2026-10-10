@@ -1,7 +1,7 @@
 # ------------------------------------------------------------
-# Práctica sobre Argumentos Indefinidos (*args) 1
+# Práctica sobre Argumentos Indefinidos (*args) 4
 # Solicitar números al usuario hasta que ingrese un dato
-# no numérico y calcular la suma de sus cuadrados.
+# no numérico y calcular la suma de sus valores al cuadrado.
 # ------------------------------------------------------------
 
 
@@ -15,8 +15,15 @@ def suma_cuadrados(*numeros):
 
 
 # ------------------------------------------------------------
-# Solicitar números al usuario
-# El ciclo continúa hasta que se ingrese un dato no numérico.
+# Informar al usuario sobre el funcionamiento del programa.
+# ------------------------------------------------------------
+print("Este programa sumará los cuadrados de los números que ingreses.")
+print("Ingresa números uno por uno.")
+print("Para terminar e imprimir el resultado, ingresa algo que no sea un número.")
+
+
+# ------------------------------------------------------------
+# Solicitar números hasta que se ingrese un dato no numérico.
 # ------------------------------------------------------------
 numeros = []
 
@@ -33,9 +40,8 @@ while True:
 
 
 # ------------------------------------------------------------
-# Llamar a la función y mostrar el resultado
-# *numeros desempaqueta la lista y envía sus valores como
-# argumentos individuales a la función.
+# Llamar a la función y mostrar el resultado.
+# *numeros desempaqueta la lista en argumentos individuales.
 # ------------------------------------------------------------
 resultado = suma_cuadrados(*numeros)
 
