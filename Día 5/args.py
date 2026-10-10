@@ -1,26 +1,13 @@
 # ------------------------------------------------------------
-# Práctica: Funciones con cantidad variable de datos ingresados
-# Solicitar números al usuario hasta que ingrese un dato que
-# no sea numérico y calcular la suma de todos los números.
+# Función para sumar una cantidad variable de números.
+# *args permite recibir los números como argumentos individuales.
 # ------------------------------------------------------------
-
-# ------------------------------------------------------------
-# Función para sumar los números
-# Recibe una lista de números y devuelve la suma de sus valores.
-# ------------------------------------------------------------
-def sumar_numeros(numeros):
-    suma = 0
-
-    for numero in numeros:
-        suma += numero
-
-    return suma
+def sumar_numeros(*args):
+    return sum(args)
 
 
 # ------------------------------------------------------------
-# Solicitar números al usuario
-# El ciclo continúa mientras se ingresen valores numéricos.
-# Si la conversión falla, se termina el ingreso de datos.
+# Solicitar números hasta que se ingrese un dato no numérico.
 # ------------------------------------------------------------
 numeros = []
 
@@ -37,11 +24,8 @@ while True:
 
 
 # ------------------------------------------------------------
-# Llamar a la función y mostrar el resultado
-# Se envía la lista completa a la función para sumar sus valores.
+# Llamar a la función y mostrar la suma total.
+# El operador * desempaqueta la lista en argumentos individuales.
 # ------------------------------------------------------------
-if numeros:
-    resultado = sumar_numeros(numeros)
-    print(f"La suma de los números ingresados es: {resultado}")
-else:
-    print("No ingresaste ningún número.")
+resultado = sumar_numeros(*numeros)
+print(f"La suma de los números ingresados es: {resultado}")
