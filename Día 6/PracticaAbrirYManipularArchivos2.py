@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-mi_archivo = open("texto.txt", "r")
-print(mi_archivo.readline())  # Leer e imprimir la primera línea
-mi_archivo.close()  # Cerrar el archivo después de usarlo
-=======
 # ==================================================
 # Práctica: Abrir y Manipular Archivos 2
 # Objetivo: Abrir el archivo "texto.txt", leer e
@@ -24,4 +19,3 @@ print(mi_archivo.readline())
 # Cerrar el archivo después de utilizarlo
 # --------------------------------------------------
 mi_archivo.close()
->>>>>>> Fusion
