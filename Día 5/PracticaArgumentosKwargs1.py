@@ -1,6 +1,8 @@
-# Definir la función para contar los atributos pasados como argumentos nombrados
-def cantidad_atributos(**kwargs):
-    return len(kwargs)  # Devuelve la cantidad de claves en el diccionario kwargs
+# ------------------------------------------------------------
+# Práctica sobre Argumentos Indefinidos (**kwargs) 1
+# Crear una función que cuente cuántos argumentos nombrados
+# recibe y devuelva esa cantidad.
+# ------------------------------------------------------------
 
 # Ejemplo de uso
 print(cantidad_atributos(nombre="Juan", edad=30, ciudad="Madrid"))  # Salida: 3
