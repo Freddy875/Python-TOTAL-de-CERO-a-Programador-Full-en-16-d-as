@@ -16,15 +16,16 @@
 # ------------------------------------------------------------
 def devolver_distintos(numero1, numero2, numero3):
     suma_numeros = numero1 + numero2 + numero3
+    lista_numeros = [numero1, numero2, numero3] ### Un pequeño cambio para optimizar el codigo
 
     if suma_numeros > 15:
-        return max(numero1, numero2, numero3)
+        return max(lista_numeros)
 
     elif suma_numeros < 10:
-        return min(numero1, numero2, numero3)
+        return min(lista_numeros)
 
     else:
-        numeros_ordenados = sorted([numero1, numero2, numero3])
+        numeros_ordenados = sorted(lista_numeros)
         return numeros_ordenados[1]
 
 
