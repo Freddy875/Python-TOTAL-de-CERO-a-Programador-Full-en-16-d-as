@@ -14,7 +14,7 @@ mi_archivo = open("mi_archivo.txt", "a")
 # --------------------------------------------------
 # Escribir el nuevo texto al final del archivo
 # --------------------------------------------------
-mi_archivo.write("Nuevo inicio de sesión")
+mi_archivo.write("\nNuevo inicio de sesión")
 
 # --------------------------------------------------
 # Cerrar el archivo después de escribir
