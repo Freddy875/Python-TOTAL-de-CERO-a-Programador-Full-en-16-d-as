@@ -4,12 +4,6 @@
 # recibe y devuelva esa cantidad.
 # ------------------------------------------------------------
 
-<<<<<<< HEAD
-# Ejemplo de uso
-print(cantidad_atributos(nombre="Juan", edad=30, ciudad="Madrid"))  # Salida: 3
-print(cantidad_atributos(a=1, b=2))  # Salida: 2
-print(cantidad_atributos())  # Salida: 0
-=======
 
 # ------------------------------------------------------------
 # Función para contar los atributos recibidos
@@ -28,4 +22,3 @@ def cantidad_atributos(**kwargs):
 print(cantidad_atributos(nombre="Juan", edad=30, ciudad="Madrid"))  # Imprime: 3
 print(cantidad_atributos(a=1, b=2))  # Imprime: 2
 print(cantidad_atributos())  # Imprime: 0
->>>>>>> c9a0b14 (Versión documentada completa)
