@@ -1,9 +1,37 @@
-# Abrir el archivo en modo escritura ("w") y reemplazar su contenido
-mi_archivo = open("mi_archivo.txt", "w")
-mi_archivo.write("Nuevo texto")  # Escribimos el nuevo contenido
-mi_archivo.close()  # Cerramos el archivo
+# ==================================================
+# Práctica: Crear y Escribir Archivos 1
+# Objetivo: Abrir el archivo "mi_archivo.txt" en modo
+# escritura, reemplazar su contenido por "Nuevo texto"
+# y luego imprimir el contenido actualizado.
+# ==================================================
 
-# Volver a abrir el archivo en modo lectura ("r") y mostrar su contenido
+# --------------------------------------------------
+# Abrir el archivo en modo escritura para reemplazar
+# su contenido anterior
+# --------------------------------------------------
+mi_archivo = open("mi_archivo.txt", "w")
+
+# --------------------------------------------------
+# Escribir el nuevo texto en el archivo
+# --------------------------------------------------
+mi_archivo.write("Nuevo texto")
+
+# --------------------------------------------------
+# Cerrar el archivo después de escribir
+# --------------------------------------------------
+mi_archivo.close()
+
+# --------------------------------------------------
+# Volver a abrir el archivo en modo lectura
+# --------------------------------------------------
 mi_archivo = open("mi_archivo.txt", "r")
-print(mi_archivo.read())  # Leer e imprimir el contenido actualizado
-mi_archivo.close()  # Cerrar el archivo
+
+# --------------------------------------------------
+# Leer e imprimir el contenido completo actualizado
+# --------------------------------------------------
+print(mi_archivo.read())
+
+# --------------------------------------------------
+# Cerrar el archivo después de leer
+# --------------------------------------------------
+mi_archivo.close()
