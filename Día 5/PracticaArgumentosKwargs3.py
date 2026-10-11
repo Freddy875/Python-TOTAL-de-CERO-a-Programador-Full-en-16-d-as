@@ -1,4 +1,6 @@
 # Definir la función para describir a una persona
+# Versión de documentación simple
+
 def describir_persona(nombre, **kwargs):
     print(f"Características de {nombre}:")  # Encabezado con el nombre
     for clave, valor in kwargs.items():  # Recorrer los argumentos nombrados
