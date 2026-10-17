@@ -13,14 +13,15 @@ from pathlib import Path
 
 # --------------------------------------------------
 # Crear la variable con el directorio base del usuario
-# --------------------------------------------------
 # Obtener el directorio base del usuario
 # Path.home() devuelve un objeto Path con la carpeta personal
-# del usuario actual (por ejemplo, C:\Users\Fernando o /home/fernando)
+# del usuario actual
+# --------------------------------------------------
+
 ruta_base = Path.home()
 
 # --------------------------------------------------
 # Mostrar la ruta base
 # --------------------------------------------------
 # Imprimir la ruta base
-print(ruta_base)  # Ejemplo: /home/fernando
+print(ruta_base) 
