@@ -1,9 +1,9 @@
 # ==================================================
-# Práctica: Atributos 2
+# Práctica: Atributos 2 (versión con datos del usuario)
 # Objetivo: Crear una clase llamada Cubo con el atributo
 # de clase caras (igual a 6) y el atributo de instancia
-# color, crear una instancia llamada cubo_rojo de color
-# "rojo" y mostrar su descripción con un método.
+# color, pedir el color al usuario, crear una instancia
+# con él y mostrar su descripción con un método.
 # ==================================================
 
 # --------------------------------------------------
@@ -49,15 +49,22 @@ class Cubo:
         print(f"Este cubo es de color {self.color} y tiene {Cubo.caras} caras.")
 
 # --------------------------------------------------
-# Crear la instancia
-# "rojo" se envía a __init__ y se guarda en el atributo color
-# de cubo_rojo
+# Pedir el color del cubo al usuario
+# input() muestra una pregunta y devuelve lo que el usuario escribe
+# como texto, que es justo el tipo que necesita el atributo color
 # --------------------------------------------------
-cubo_rojo = Cubo("rojo")
+color_cubo = input("¿De qué color es tu cubo? ")
+
+# --------------------------------------------------
+# Crear la instancia
+# El color escrito por el usuario se envía a __init__ y se guarda
+# en el atributo color de mi_cubo
+# --------------------------------------------------
+mi_cubo = Cubo(color_cubo)
 
 # --------------------------------------------------
 # Usar el método para describir el cubo
-# Se llama al método con la instancia; imprime:
+# Se llama al método con la instancia; imprime, por ejemplo:
 # Este cubo es de color rojo y tiene 6 caras.
 # --------------------------------------------------
-cubo_rojo.describir()
+mi_cubo.describir()
