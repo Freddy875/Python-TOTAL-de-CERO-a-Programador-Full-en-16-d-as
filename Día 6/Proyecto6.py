@@ -227,24 +227,25 @@ def menu():
 
         opcion = input("\nSelecciona una opción: ").strip()
 
-        if opcion == "1":
-            leer_receta()
-        elif opcion == "2":
-            crear_receta()
-        elif opcion == "3":
-            crear_categoria()
-        elif opcion == "4":
-            eliminar_receta()
-        elif opcion == "5":
-            eliminar_categoria()
-        elif opcion == "6":
-            print("¡Hasta pronto!")
-            break
-        else:
-            print("Opción no válida.")
-
-        if opcion != "6":
-            input("\nPresiona Enter para volver al menú...")
+# --------------------------------------------------
+# Ejecutar la acción correspondiente a la opción elegida
+# --------------------------------------------------
+match opcion:
+    case "1":
+        leer_receta()
+    case "2":
+        crear_receta()
+    case "3":
+        crear_categoria()
+    case "4":
+        eliminar_receta()
+    case "5":
+        eliminar_categoria()
+    case "6":
+        print("¡Hasta pronto!")
+        break
+    case _:
+        print("Opción no válida.")
 
 
 # ------------------------------------------------------------
