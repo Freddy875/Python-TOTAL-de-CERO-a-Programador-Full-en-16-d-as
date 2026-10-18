@@ -1,9 +1,9 @@
 # ==================================================
-# Práctica: Atributos 1
+# Práctica: Atributos 1 (versión con datos del usuario)
 # Objetivo: Crear una clase llamada Casa con los
-# atributos color y cantidad_pisos, crear una instancia
-# llamada casa_blanca de color "blanco" y con 4 pisos,
-# y mostrar su descripción con un método.
+# atributos color y cantidad_pisos, pedir esos valores
+# al usuario, crear una instancia con ellos y mostrar
+# su descripción con un método.
 # ==================================================
 
 # --------------------------------------------------
@@ -44,15 +44,24 @@ class Casa:
         print(f"La casa es de color {self.color} y tiene {self.cantidad_pisos} pisos.")
 
 # --------------------------------------------------
-# Crear la instancia
-# Los valores entre paréntesis se envían a __init__: "blanco" se
-# guarda en color y 4 en cantidad_pisos
+# Pedir los datos de la casa al usuario
+# input() muestra una pregunta y devuelve lo que el usuario escribe
+# siempre como texto; por eso la cantidad de pisos se convierte a
+# número entero con int()
 # --------------------------------------------------
-casa_blanca = Casa("blanco", 4)
+color_casa = input("¿De qué color es tu casa? ")
+pisos_casa = int(input("¿Cuántos pisos tiene? "))
+
+# --------------------------------------------------
+# Crear la instancia
+# Los valores escritos por el usuario se envían a __init__ y se
+# guardan en color y cantidad_pisos
+# --------------------------------------------------
+mi_casa = Casa(color_casa, pisos_casa)
 
 # --------------------------------------------------
 # Usar el método para describir la casa
-# Se llama al método con la instancia; imprime:
+# Se llama al método con la instancia; imprime, por ejemplo:
 # La casa es de color blanco y tiene 4 pisos.
 # --------------------------------------------------
-casa_blanca.describir()
+mi_casa.describir()
