@@ -205,10 +205,9 @@ def eliminar_categoria():
     else:
         print("Operación cancelada.")
 
-
-# ------------------------------------------------------------
+# --------------------------------------------------
 # Mostrar el menú principal y gestionar las opciones
-# ------------------------------------------------------------
+# --------------------------------------------------
 def menu():
     while True:
         os.system("cls" if os.name == "nt" else "clear")
@@ -225,28 +224,37 @@ def menu():
         print("5. Eliminar una categoría")
         print("6. Salir")
 
+        # --------------------------------------------------
+        # Solicitar al usuario que seleccione una opción
+        # --------------------------------------------------
         opcion = input("\nSelecciona una opción: ").strip()
 
-        if opcion == "1":
-            leer_receta()
-        elif opcion == "2":
-            crear_receta()
-        elif opcion == "3":
-            crear_categoria()
-        elif opcion == "4":
-            eliminar_receta()
-        elif opcion == "5":
-            eliminar_categoria()
-        elif opcion == "6":
-            print("¡Hasta pronto!")
-            break
-        else:
-            print("Opción no válida.")
+        # --------------------------------------------------
+        # Ejecutar la opción seleccionada mediante match-case
+        # --------------------------------------------------
+        match opcion:
+            case "1":
+                leer_receta()
+            case "2":
+                crear_receta()
+            case "3":
+                crear_categoria()
+            case "4":
+                eliminar_receta()
+            case "5":
+                eliminar_categoria()
+            case "6":
+                print("¡Hasta pronto!")
+                break
+            case _:
+                print("Opción no válida.")
 
+        # --------------------------------------------------
+        # Esperar antes de regresar al menú principal
+        # --------------------------------------------------
         if opcion != "6":
             input("\nPresiona Enter para volver al menú...")
-
-
+            
 # ------------------------------------------------------------
 # Iniciar el programa
 # ------------------------------------------------------------
