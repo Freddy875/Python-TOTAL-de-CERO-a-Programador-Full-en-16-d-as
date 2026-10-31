@@ -1,9 +1,9 @@
 # ==================================================
-# Práctica Tipos de Métodos 2 (con salida)
-# Objetivo: usar el método de clase revivir() para
-# cambiar el atributo de clase vivo de la clase
-# Jugador y mostrar en pantalla el antes y el
-# después.
+# Práctica Tipos de Métodos 2 (con interacción)
+# Objetivo: avisar al jugador que está muerto,
+# preguntarle si quiere revivir y, según su
+# respuesta, usar el método de clase revivir() o
+# terminar el juego.
 # ==================================================
 
 
@@ -44,25 +44,32 @@ class Jugador:
 
 
 # --------------------------------------------------
-# Estado inicial del jugador
-# Se consulta el atributo vivo antes de revivir.
-# Resultado esperado: imprime "¿Está vivo? False"
+# Preguntar al jugador
+# respuesta: guarda lo que escribe el usuario. Se
+# usa strip() para quitar espacios y lower() para
+# aceptar mayúsculas o minúsculas (Si, SI, si).
+# Resultado esperado: muestra el aviso y espera la
+# respuesta del usuario.
 # --------------------------------------------------
-print(f"¿Está vivo? {Jugador.vivo}")
+print("Jugador, estás muerto.")
+respuesta = input("¿Quieres revivir? (si/no): ").strip().lower()
 
 
 # --------------------------------------------------
-# Revivir al jugador
-# Se llama al método de clase directamente desde la
-# clase, sin crear una instancia.
+# Decidir según la respuesta
+# Si responde "si" o "sí", se llama a revivir() y se
+# confirma con el atributo vivo. Si responde "no",
+# termina el juego. Cualquier otra respuesta se
+# considera no válida.
+# Resultado esperado:
+#   si -> "¡Has revivido! ¿Está vivo? True"
+#   no -> "Fin del juego"
+#   otra -> "Respuesta no válida. Fin del juego"
 # --------------------------------------------------
-Jugador.revivir()
-
-
-# --------------------------------------------------
-# Estado final del jugador
-# Se consulta de nuevo el atributo vivo después de
-# revivir.
-# Resultado esperado: imprime "¿Está vivo? True"
-# --------------------------------------------------
-print(f"¿Está vivo? {Jugador.vivo}")
+if respuesta in ("si", "sí"):
+    Jugador.revivir()
+    print(f"¡Has revivido! ¿Está vivo? {Jugador.vivo}")
+elif respuesta == "no":
+    print("Fin del juego")
+else:
+    print("Respuesta no válida. Fin del juego")
