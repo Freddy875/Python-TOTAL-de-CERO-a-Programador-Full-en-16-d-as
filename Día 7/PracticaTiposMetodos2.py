@@ -1,8 +1,9 @@
 # ==================================================
-# Práctica Tipos de Métodos 2
-# Objetivo: crear un método de clase revivir() que
-# cambie el atributo de clase vivo de la clase
-# Jugador a True cada vez que se invoque.
+# Práctica Tipos de Métodos 2 (con salida)
+# Objetivo: usar el método de clase revivir() para
+# cambiar el atributo de clase vivo de la clase
+# Jugador y mostrar en pantalla el antes y el
+# después.
 # ==================================================
 
 
@@ -27,7 +28,6 @@ class Jugador:
     # El decorador @classmethod hace que el método
     # reciba cls (la clase) en lugar de self, por lo
     # que modifica el atributo para toda la clase.
-    # Resultado esperado: Jugador.vivo pasa a True.
     # ------------------------------
     @classmethod
     def revivir(cls):
@@ -41,3 +41,28 @@ class Jugador:
             None. Solo modifica el atributo vivo a True.
         """
         cls.vivo = True
+
+
+# --------------------------------------------------
+# Estado inicial del jugador
+# Se consulta el atributo vivo antes de revivir.
+# Resultado esperado: imprime "¿Está vivo? False"
+# --------------------------------------------------
+print(f"¿Está vivo? {Jugador.vivo}")
+
+
+# --------------------------------------------------
+# Revivir al jugador
+# Se llama al método de clase directamente desde la
+# clase, sin crear una instancia.
+# --------------------------------------------------
+Jugador.revivir()
+
+
+# --------------------------------------------------
+# Estado final del jugador
+# Se consulta de nuevo el atributo vivo después de
+# revivir.
+# Resultado esperado: imprime "¿Está vivo? True"
+# --------------------------------------------------
+print(f"¿Está vivo? {Jugador.vivo}")
