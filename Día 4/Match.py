@@ -152,7 +152,7 @@ libro2 = {
 # de una misma lista para poder recorrerlos posteriormente.
 # ------------------------------------------------------------
 
-elemento = [cliente, pelicula, pelicula2, libro, libro2]
+elementos = [cliente, pelicula, pelicula2, libro, libro2]
 
 
 # ------------------------------------------------------------
@@ -164,8 +164,8 @@ elemento = [cliente, pelicula, pelicula2, libro, libro2]
 # o un libro.
 # ------------------------------------------------------------
 
-for e in elemento:
-    match e:
+for elemento in elementos:
+    match elemento:
 
         # ----------------------------------------------------
         # Identificar un cliente

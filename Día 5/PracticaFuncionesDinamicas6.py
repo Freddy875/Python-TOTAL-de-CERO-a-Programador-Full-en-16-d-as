@@ -26,8 +26,8 @@ def contar_positivos_negativos(lista):
 
 lista_numeros = []
 
-for i in range(5):
-    numero = int(input(f"Ingresa el número {i + 1}: "))
+for posicion in range(5):
+    numero = int(input(f"Ingresa el número {posicion + 1}: "))
     lista_numeros.append(numero)
 
 

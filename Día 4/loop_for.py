@@ -224,6 +224,6 @@ libros = {
 # a recibe la clave y b recibe el valor.
 # ------------------------------------------------------------
 
-for a, b in libros.items():
-    print(a)
-    print(b)
+for titulo, autor in libros.items():
+    print(titulo)
+    print(autor)

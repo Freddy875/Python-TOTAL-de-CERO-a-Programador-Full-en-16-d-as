@@ -46,13 +46,13 @@ suma_impares = 0
 # Si no es par, se considera impar.
 # ------------------------------------------------------------
 
-for num in lista_numeros:
+for numero in lista_numeros:
 
-    if num % 2 == 0:  # Verifica si el número es par
-        suma_pares += num
+    if numero % 2 == 0:  # Verifica si el número es par
+        suma_pares += numero
 
     else:  # Si no es par, es impar
-        suma_impares += num
+        suma_impares += numero
 
 
 # ------------------------------------------------------------
