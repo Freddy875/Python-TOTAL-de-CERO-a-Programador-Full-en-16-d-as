@@ -1,7 +1,8 @@
 # ============================================================
-# PRÁCTICA HERENCIA 1
+# PRÁCTICA HERENCIA 1 (CON DATOS DEL USUARIO)
 # Objetivo: Crear una clase base Persona con los atributos de
-# instancia nombre y edad, y una clase Alumno que los herede.
+# instancia nombre y edad, una clase Alumno que los herede, y
+# pedir al usuario sus datos para crear el objeto.
 # ============================================================
 
 
@@ -27,10 +28,19 @@ class Alumno(Persona):
 
 
 # ------------------------------------------------------------
-# CREAR UNA INSTANCIA DE ALUMNO
-# Se crea el objeto alumno1 con nombre y edad fijos.
+# PEDIR LOS DATOS AL USUARIO
+# Se solicitan nombre y edad; la edad se convierte a entero
+# porque input() siempre regresa texto.
 # ------------------------------------------------------------
-alumno1 = Alumno("Ana", 20)
+nombre = input("Escribe tu nombre: ")
+edad = int(input("Escribe tu edad: "))
+
+
+# ------------------------------------------------------------
+# CREAR UNA INSTANCIA DE ALUMNO
+# Se crea el objeto alumno1 con los datos que dio el usuario.
+# ------------------------------------------------------------
+alumno1 = Alumno(nombre, edad)
 
 
 # ------------------------------------------------------------
