@@ -1,7 +1,7 @@
 # ==================================================
 # PRÁCTICA HERENCIA EXTENDIDA 3
 # Objetivo: lograr que la clase Hijo herede de Padre
-# todos sus atributos y métodos, sobrescribiendo
+# y de Madre sus atributos y métodos, sobrescribiendo
 # hobby() para que tenga un pasatiempo diferente.
 # ==================================================
 
@@ -75,17 +75,65 @@ class Padre():
 
 
 # --------------------------------------------------
-# CLASE HIJO
-# Hereda todo de Padre, pero sobrescribe hobby(). Como
-# Python busca primero en Hijo, usa esa versión y no la
-# de Padre.
+# CLASE MADRE
+# Define las características y los métodos que la clase
+# Hijo hereda de la madre.
 # --------------------------------------------------
-class Hijo(Padre):
+class Madre():
+    """Representa a la madre, con sus características y hábitos."""
+
+    # ------------------------------
+    # Atributos de clase
+    # nariz: forma de la nariz.
+    # color_pelo: color del pelo.
+    # ------------------------------
+    nariz = "pequeña"
+    color_pelo = "castaño"
+
+    # ------------------------------
+    # Método cantar
+    # Devuelve la forma de cantar de la madre.
+    # ------------------------------
+    def cantar(self):
+        """Devuelve la forma de cantar.
+
+        Parámetros:
+            self: instancia de la clase.
+
+        Devuelve:
+            str: la descripción de la forma de cantar.
+        """
+        return "Cantando con voz suave"
+
+    # ------------------------------
+    # Método hobby
+    # Devuelve el pasatiempo de la madre.
+    # ------------------------------
+    def hobby(self):
+        """Devuelve el pasatiempo de la madre.
+
+        Parámetros:
+            self: instancia de la clase.
+
+        Devuelve:
+            str: la descripción del pasatiempo.
+        """
+        return "Leo novelas en mi tiempo libre"
+
+
+# --------------------------------------------------
+# CLASE HIJO
+# Hereda de Padre y de Madre con herencia múltiple, y
+# sobrescribe hobby() para tener su propio pasatiempo.
+# Como Python busca primero en Hijo, usa esa versión y
+# no las de Padre o Madre.
+# --------------------------------------------------
+class Hijo(Padre, Madre):
     """Representa al hijo, que tiene su propio pasatiempo."""
 
     # ------------------------------
     # Método hobby (sobrescrito)
-    # Reemplaza el pasatiempo heredado de Padre.
+    # Reemplaza el pasatiempo heredado.
     # ------------------------------
     def hobby(self):
         """Devuelve el pasatiempo del hijo.
@@ -101,16 +149,51 @@ class Hijo(Padre):
 
 # --------------------------------------------------
 # PRUEBA DE LA HERENCIA
-# Crea un hijo y muestra un atributo heredado, un método
-# heredado y el método sobrescrito.
+# Crea un objeto de cada clase, muestra qué tiene el
+# hijo de cada uno y compara sus hobbies.
 # Variables:
+#   padre: objeto de la clase Padre.
+#   madre: objeto de la clase Madre.
 #   hijo: objeto de la clase Hijo.
 # Resultado esperado:
-#   marrón
-#   Jajaja
-#   Juego videojuegos en mi tiempo libre
+#   Esto es lo que tienes de tu padre:
+#   Color de ojos: marrón
+#   Tipo de pelo: rulos
+#   Altura: media
+#   Voz: grave
+#   Deporte preferido: tenis
+#   Risa: Jajaja
+#   Forma de caminar: Caminando con pasos largos y rápidos
+#
+#   Esto es lo que tienes de tu madre:
+#   Nariz: pequeña
+#   Color de pelo: castaño
+#   Forma de cantar: Cantando con voz suave
+#
+#   Los hobbies de cada uno:
+#   Padre: Pinto madera en mi tiempo libre
+#   Madre: Leo novelas en mi tiempo libre
+#   Hijo: Juego videojuegos en mi tiempo libre
 # --------------------------------------------------
+padre = Padre()
+madre = Madre()
 hijo = Hijo()
-print(hijo.color_ojos)          # Heredado del padre
-print(hijo.reir())              # Heredado del padre
-print(hijo.hobby())             # Método sobrescrito
+
+print("Esto es lo que tienes de tu padre:")
+print(f"Color de ojos: {hijo.color_ojos}")
+print(f"Tipo de pelo: {hijo.tipo_pelo}")
+print(f"Altura: {hijo.altura}")
+print(f"Voz: {hijo.voz}")
+print(f"Deporte preferido: {hijo.deporte_preferido}")
+print(f"Risa: {hijo.reir()}")
+print(f"Forma de caminar: {hijo.caminar()}")
+
+print("\nEsto es lo que tienes de tu madre:")
+print(f"Nariz: {hijo.nariz}")
+print(f"Color de pelo: {hijo.color_pelo}")
+print(f"Forma de cantar: {hijo.cantar()}")
+
+print("\nLos hobbies de cada uno:")
+print(f"Padre: {padre.hobby()}")
+print(f"Madre: {madre.hobby()}")
+print(f"Hijo: {hijo.hobby()}")
