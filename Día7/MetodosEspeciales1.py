@@ -59,3 +59,16 @@ autor = input("Escribe el autor del libro: ")
 # --------------------------------------------------
 mi_libro = Libro(titulo, autor)
 print(mi_libro)
+
+# --------------------------------------------------
+# EXPORTACIÓN A ARCHIVO TXT
+# El bloque with abre (o crea) el archivo libro.txt
+# en modo escritura y lo cierra solo al terminar.
+# str(mi_libro) llama a __str__, así que se guarda el
+# mismo texto que se mostró en pantalla.
+# Resultado esperado: libro.txt contiene
+#   "Comer animales", de Jonathan Safran Foer
+# --------------------------------------------------
+with open("libro.txt", "w", encoding="utf-8") as archivo:
+    # Escribe en el archivo el texto del libro
+    archivo.write(str(mi_libro))
