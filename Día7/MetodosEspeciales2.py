@@ -1,6 +1,6 @@
 # ==================================================
 # PRÁCTICA MÉTODOS ESPECIALES 2
-# Objetivo: implementar el método especial __len__
+# Objetivo: Implementar el método especial __len__
 # en la clase Libro para que, al ejecutar len() sobre
 # el objeto, devuelva el número de páginas como
 # número entero.
