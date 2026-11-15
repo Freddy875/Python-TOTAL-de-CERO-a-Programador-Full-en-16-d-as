@@ -1,8 +1,26 @@
-### Practica de polimorfismo 1
-palabra = "polimorfismo"
-lista = ["Clases", "POO", "Polimorfismo"]
-tupla = (1, 2, 3, 80)
+class Mago():
+    def defender(self):
+        print("Escudo mágico")
 
-# Iteramos y mostramos su longitud
-for objeto in [palabra, lista, tupla]:
-    print(len(objeto))
+class Arquero():
+    def defender(self):
+        print("Esconderse")
+
+class Samurai():
+    def defender(self):
+        print("Bloqueo")
+
+# Función polimórfica
+def personaje_defender(personaje):
+    personaje.defender()
+
+# Crear instancias
+mago = Mago()
+arquero = Arquero()
+samurai = Samurai()
+
+# Probar la función con cada personaje
+personaje_defender(mago)
+personaje_defender(arquero)
+personaje_defender(samurai)
+
