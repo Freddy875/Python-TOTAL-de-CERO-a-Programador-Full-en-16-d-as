@@ -1,3 +1,4 @@
+### Practica de polimorfismo 1
 palabra = "polimorfismo"
 lista = ["Clases", "POO", "Polimorfismo"]
 tupla = (1, 2, 3, 80)
