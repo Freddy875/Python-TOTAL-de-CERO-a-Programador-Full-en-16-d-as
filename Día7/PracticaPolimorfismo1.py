@@ -19,7 +19,7 @@ tupla = (1, 2, 3, 80)
 # ITERACIÓN Y LONGITUD DE CADA OBJETO
 # El ciclo for recorre una lista formada por los tres
 # objetos (palabra, lista, tupla). En cada vuelta,
-# obj toma uno de ellos y len() devuelve su longitud,
+# objeto toma uno de ellos y len() devuelve su longitud,
 # sin importar de qué tipo sea.
 # Resultado esperado: imprime 12, 3 y 4.
 # --------------------------------------------------
